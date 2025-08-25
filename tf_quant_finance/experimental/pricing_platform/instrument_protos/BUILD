@@ -27,14 +27,14 @@ proto_library(
         "swaption.proto",
     ],
     deps = [
-        ":business_days_py_pb2",
-        ":currencies_py_pb2",
-        ":date_py_pb2",
-        ":daycount_conventions_py_pb2",
-        ":decimal_py_pb2",
-        ":metadata_py_pb2",
-        ":period_py_pb2",
-        ":rate_indices_py_pb2",
+        ":business_days_proto",
+        ":currencies_proto",
+        ":date_proto",
+        ":daycount_conventions_proto",
+        ":decimal_proto",
+        ":metadata_proto",
+        ":period_proto",
+        ":rate_indices_proto",
     ],
 )
 
