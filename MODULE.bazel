@@ -1,0 +1,7 @@
+module(name = "tf_quant_finance", version="0.0.1.dev34")
+
+# -- bazel_dep definitions -- #
+bazel_dep(name = "protobuf", version = "32.0")
+# -- use_repo_rule statements -- #
+
+# -- repo definitions -- #

@@ -77,7 +77,7 @@ filegroup(
 filegroup(
     name = "generated_docs",
     srcs = glob([
-        "g3doc/**",
-    ]),
+        "g3doc/**"
+    ], allow_empty=True),
     visibility = ["__subpackages__"],
 )
