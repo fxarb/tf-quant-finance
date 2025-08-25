@@ -43,14 +43,14 @@ if '--nightly' in sys.argv:
   sys.argv.remove('--nightly')
   project_name = 'tff-nightly'
   release_suffix = datetime.datetime.utcnow().strftime('.dev%Y%m%d')
-  tfp_package = 'tensorflow-probability >= 0.12.1'
+  tfp_package = 'tensorflow-probability >= 0.25.0'
 else:
   project_name = 'tf-quant-finance'
   # The suffix should be replaced with 'aN', 'bN', or 'rcN' (note: no dots) for
   # respective alpha releases, beta releases, and release candidates. And it
   # should be cleared, i.e. set to '', for stable releases (c.f. PEP 440).
   release_suffix = '.dev34'
-  tfp_package = 'tensorflow-probability >= 0.12.1'
+  tfp_package = 'tensorflow-probability >= 0.25.0'
 
 __version__ = '.'.join([major_version, minor_version, patch_version])
 if release_suffix:
@@ -89,10 +89,13 @@ setup(
         'Intended Audience :: Education',
         'Intended Audience :: Financial and Insurance Industry',
         'License :: OSI Approved :: Apache Software License',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
+        'Programming Language :: Python :: 3.12',
+        'Programming Language :: Python :: 3.13',
         'Natural Language :: English',
         'Topic :: Scientific/Engineering :: Mathematics',
         'Topic :: Software Development :: Libraries :: Python Modules',
