@@ -18,7 +18,7 @@ set -x
 
 PLATFORM="$(uname -s | tr 'A-Z' 'a-z')"
 
-PIP_FILE_PREFIX="bazel-bin/build_pip_pkg.runfiles/tf_quant_finance/"
+PIP_FILE_PREFIX="bazel-bin/build_pip_pkg.runfiles/_main/"
 
 function main() {
   SETUP_FLAGS="--universal"
