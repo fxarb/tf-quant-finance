@@ -1,4 +1,4 @@
-module(name = "tf_quant_finance", version="0.0.1.dev34")
+module(name = "tf_quant_finance", version="0.0.1.dev34", repo_name = "tf_quant_finance")
 
 # -- bazel_dep definitions -- #
 bazel_dep(name = "protobuf", version = "32.0")
