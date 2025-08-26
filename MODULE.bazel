@@ -2,7 +2,7 @@ module(name = "tf_quant_finance", version="0.0.1.dev34")
 
 # -- bazel_dep definitions -- #
 bazel_dep(name = "protobuf", version = "29.5")
-
+bazel_dep(name = "rules_python", version = "1.5.3")
 
 SUPPORTED_PYTHON_VERSIONS = [
     "3.9",
