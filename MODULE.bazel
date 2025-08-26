@@ -3,6 +3,28 @@ module(name = "tf_quant_finance", version="0.0.1.dev34")
 # -- bazel_dep definitions -- #
 bazel_dep(name = "protobuf", version = "29.5")
 
+
+SUPPORTED_PYTHON_VERSIONS = [
+    "3.9",
+    "3.10",
+    "3.11",
+    "3.12",
+    "3.13",
+]
+# TODO: Support hermetic / system python in bzlmod.
+python = use_extension("@rules_python//python/extensions:python.bzl", "python")
+
+[
+    python.toolchain(
+        # Disable root warning for .pyc cache misses since CI runs as root.
+        # See https://github.com/bazelbuild/rules_python/pull/713
+        ignore_root_user_error = True,
+        is_default = python_version == SUPPORTED_PYTHON_VERSIONS[-1],
+        python_version = python_version,
+    )
+    for python_version in SUPPORTED_PYTHON_VERSIONS
+]
+
 # -- use_repo_rule statements -- #
 
 # -- repo definitions -- #
